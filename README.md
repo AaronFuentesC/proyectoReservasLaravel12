@@ -19,21 +19,21 @@ Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para admi
 - Livewire 4
 
 ## 📂 Estructura del proyecto
-app/
-bootstrap/
-config/
-database/
-public/
-resources/
-routes/
-storage/
-tests/
+- app/
+- bootstrap/
+- config/
+- database/
+- public/
+- resources/
+- routes/
+- storage/
+- tests/
 
 ## ⚙️ Instalación
 
 Sigue estos pasos para ejecutar el proyecto en local:
 
-1. Clonar el repositorio
+1. Clonar el repositorio 
 git clone https://github.com/AaronFuentesC/proyectoReservasLaravel12.git
 cd proyectoReservasLaravel12
 2. Instalar dependencias
@@ -42,17 +42,17 @@ npm install && npm run dev
 3. Configurar entorno
 cp .env.example .env
 
-Editar el archivo .env con tus credenciales de base de datos.
+4. Editar el archivo .env con tus credenciales de base de datos.
 
-4. Generar clave de la aplicación
+5. Generar clave de la aplicación
 php artisan key:generate
-5. Migrar base de datos
+6. Migrar base de datos
 php artisan migrate
 
-6. Ejecutar los seeders
+7. Ejecutar los seeders
 
 php artisan db:seed
-7. Ejecutar el servidor
+8. Ejecutar el servidor
 php artisan serve
 
 Accede en:
