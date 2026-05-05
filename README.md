@@ -1,6 +1,6 @@
 # 📅 Proyecto de Reservas - Laravel 12
 
-Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para administrar clientes, servicios y disponibilidad de forma eficiente.
+Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para administrar salas, objetos y disponibilidad de manera eficiente.
 
 ## 🚀 Características
 - Gestión de usuarios (registro y autenticación)
@@ -98,5 +98,5 @@ Este proyecto está bajo la licencia MIT.
 
 ## 📬 Contacto
 
-Desarrollado por Aaron Fuentes
-GitHub: https://github.com/AaronFuentesC
+Desarrollado por Aaron Fuentes Casanova
+#### GitHub: https://github.com/AaronFuentesC
