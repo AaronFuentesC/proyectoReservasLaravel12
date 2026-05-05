@@ -38,27 +38,30 @@ Sigue estos pasos para ejecutar el proyecto en local:
 git clone https://github.com/AaronFuentesC/proyectoReservasLaravel12.git
 cd proyectoReservasLaravel12
 
-3. Instalar dependencias
+2. Instalar dependencias
 
 composer install
 npm install && npm run dev
 
-4. Configurar entorno
+3. Configurar entorno
+
 cp .env.example .env
 
-5. Editar el archivo .env con tus credenciales de base de datos.
+4. Editar el archivo .env con tus credenciales de base de datos.
 
-6. Generar clave de la aplicación
+5. Generar clave de la aplicación
+
 php artisan key:generate
 
-7. Migrar base de datos
+6. Migrar base de datos
+
 php artisan migrate
 
-8. Ejecutar los seeders
+7. Ejecutar los seeders
 
 php artisan db:seed
 
-9. Ejecutar el servidor
+8. Ejecutar el servidor
 
 php artisan serve
 
