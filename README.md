@@ -58,7 +58,8 @@ php artisan migrate
 
 php artisan db:seed
 
-8. Ejecutar el servidor
+9. Ejecutar el servidor
+
 php artisan serve
 
 Accede en:
