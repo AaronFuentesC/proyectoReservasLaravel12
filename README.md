@@ -18,16 +18,16 @@ Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para admi
 - Composer
 - Livewire 4
 
-📂 Estructura del proyecto
- app/
- bootstrap/
- config/
- database/
- public/
- resources/
- routes/
- storage/
- tests/
+## 📂 Estructura del proyecto
+app/
+bootstrap/
+config/
+database/
+public/
+resources/
+routes/
+storage/
+tests/
 
 ## ⚙️ Instalación
 
