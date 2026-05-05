@@ -19,16 +19,17 @@ Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para admi
 - Livewire 4
 
 📂 Estructura del proyecto
-app/
-bootstrap/
-config/
-database/
-public/
-resources/
-routes/
-storage/
-tests/
-⚙️ Instalación
+ app/
+ bootstrap/
+ config/
+ database/
+ public/
+ resources/
+ routes/
+ storage/
+ tests/
+
+## ⚙️ Instalación
 
 Sigue estos pasos para ejecutar el proyecto en local:
 
@@ -82,7 +83,7 @@ Accede en:
 - Docker
 - Laravel Sail
 
-##🤝 Contribuciones
+## 🤝 Contribuciones
 
 Las contribuciones son bienvenidas:
 
