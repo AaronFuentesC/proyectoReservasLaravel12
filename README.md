@@ -33,25 +33,31 @@ Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para admi
 
 Sigue estos pasos para ejecutar el proyecto en local:
 
-1. Clonar el repositorio 
+1. Clonar el repositorio
+
 git clone https://github.com/AaronFuentesC/proyectoReservasLaravel12.git
 cd proyectoReservasLaravel12
-2. Instalar dependencias
+
+3. Instalar dependencias
+
 composer install
 npm install && npm run dev
-3. Configurar entorno
+
+4. Configurar entorno
 cp .env.example .env
 
-4. Editar el archivo .env con tus credenciales de base de datos.
+5. Editar el archivo .env con tus credenciales de base de datos.
 
-5. Generar clave de la aplicación
+6. Generar clave de la aplicación
 php artisan key:generate
-6. Migrar base de datos
+
+7. Migrar base de datos
 php artisan migrate
 
-7. Ejecutar los seeders
+8. Ejecutar los seeders
 
 php artisan db:seed
+
 8. Ejecutar el servidor
 php artisan serve
 
