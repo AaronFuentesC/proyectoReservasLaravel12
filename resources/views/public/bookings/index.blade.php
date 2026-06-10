@@ -34,7 +34,7 @@
                 <p>{{ $booking['description'] }}</p>
     <div class="mt-2 text-sm">
 
-        <div class="flex items-center gap-2 text-gray-600">
+        <div class="flex items-center gap-2 text-gray-400">
 
             <span>📅</span>
 
@@ -69,7 +69,7 @@
 
             @elseif($booking->time_status === 'past')
 
-                <span class="text-xs text-gray-500">
+                <span class="text-xs text-gray-400">
                     Finalizada
                 </span>
 
@@ -215,14 +215,14 @@
 
                     @endif
                     @if($booking->state === \App\BookingState::rejected && $lastComment && $lastComment->user->hasRole('admin'))
-                        <p class="mt-1 text-sm text-gray-700">
+                        <p class="mt-1 text-sm text-gray-400">
                             <strong>Motivo:</strong> {{ $lastComment->description }}
                         </p>
                     @endif
                 </div>
                 <div>
                     @if($booking->state === \App\BookingState::approved && $lastComment && $lastComment->user->hasRole('admin'))
-                        <p class="mt-1 text-sm text-gray-700">
+                        <p class="mt-1 text-sm text-gray-400">
                             <strong>Anotación:</strong> {{ $lastComment->description }}
                         </p>
                     @endif
@@ -238,7 +238,7 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    Swal.fire({
+                    Swal.fire(window.getFluxSwalThemeOptions({
                         title: '¿Estás seguro?',
                         text: "¡No podrás revertir esto!",
                         icon: 'warning',
@@ -247,7 +247,7 @@
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'Sí, eliminarlo!',
                         cancelButtonText: 'Cancelar'
-                    }).then((result) => {
+                    })).then((result) => {
                         if (result.isConfirmed) {
                             form.submit();
                         }
@@ -262,7 +262,7 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    Swal.fire({
+                    Swal.fire(window.getFluxSwalThemeOptions({
                         title: '¿Quieres publicar esta reserva?',
                         text: "¡Tendrás que esperar a que un administrador la confirme!",
                         icon: 'warning',
@@ -271,7 +271,7 @@
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'Sí, publícala!',
                         cancelButtonText: 'Cancelar'
-                    }).then((result) => {
+                    })).then((result) => {
                         if (result.isConfirmed) {
                             form.submit();
                         }
@@ -286,7 +286,7 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    Swal.fire({
+                    Swal.fire(window.getFluxSwalThemeOptions({
                         title: '¿Quieres cancelar esta reserva?',
                         text: "¡No podrás interactuar con ella a no ser que contactes con un administrador!",
                         icon: 'warning',
@@ -295,7 +295,7 @@
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'Sí, cancélala!',
                         cancelButtonText: 'No cancelar'
-                    }).then((result) => {
+                    })).then((result) => {
                         if (result.isConfirmed) {
                             form.submit();
                         }

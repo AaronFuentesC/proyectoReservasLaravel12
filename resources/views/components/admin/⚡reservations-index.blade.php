@@ -56,7 +56,7 @@ new class extends Component {
                 <p>{{ $booking->description }}</p>
     <div class="mt-2 text-sm">
 
-        <div class="flex items-center gap-2 text-gray-600">
+        <div class="flex items-center gap-2 text-gray-400">
 
             <span>📅</span>
 
@@ -91,7 +91,7 @@ new class extends Component {
 
             @elseif($booking->time_status === 'past')
 
-                <span class="text-xs text-gray-500">
+                <span class="text-xs text-gray-400">
                     Finalizada
                 </span>
 

@@ -54,7 +54,7 @@
                 form.addEventListener('submit', function (e) {
                     e.preventDefault();
 
-                    Swal.fire({
+                    Swal.fire(window.getFluxSwalThemeOptions({
                         title: '¿Estás seguro?',
                         text: "¡No podrás revertir esto!",
                         icon: 'warning',
@@ -63,7 +63,7 @@
                         cancelButtonColor: '#d33',
                         confirmButtonText: 'Sí, eliminarlo!',
                         cancelButtonText: 'Cancelar'
-                    }).then((result) => {
+                    })).then((result) => {
                         if (result.isConfirmed) {
                             form.submit();
                         }
