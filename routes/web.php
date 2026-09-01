@@ -3,8 +3,21 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Admin\BookingController;
 
+Route::get('/', function () {
+    if (! auth()->check()) {
+        return redirect()->route('login');
+    }
 
-Route::view('/', 'welcome')->name('home');
+    if (auth()->user()->hasRole('admin')) {
+        return redirect()->route('dashboard');
+    }
+
+    if (auth()->user()->hasRole('employee')) {
+        return redirect()->route('public.bookings.index');
+    }
+
+    return redirect()->route('login');
+})->name('home');
 
 Route::middleware(['auth', 'verified'])->group(function () {
     Route::view('dashboard', 'dashboard')->middleware(['auth','admin.only'])->name('dashboard'); //Usamos el Middleware de admin.only ()
