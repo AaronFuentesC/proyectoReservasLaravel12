@@ -21,28 +21,26 @@
             @method('PUT')
             <flux:input label="Nombre del equipo" name="name" value="{{ old('name', $item->name) }}"
                 placeholder="Escribe el título del equipo"></flux:input>
-            <label for="type">Tipo del equipo</label>
-            <select name="type" id="type" class="block w-full border rounded p-2">
+            <flux:select label="Tipo del equipo" name="type">
                 @foreach(\App\ItemType::cases() as $type)
                     <option value="{{ $type->value }}" {{ old('type', $item->type?->value) === $type->value ? 'selected' : '' }}>
                         {{ ucfirst($type->value) }}
                     </option>
                 @endforeach
-            </select>
+            </flux:select>
 
 
             <flux:input label="Nº Serie (opcional)" name="serial_number"
                 value="{{ old('serial_number', $item->serial_number) }}" />
 
 
-            <label for="state">Estado del equipo</label>
-            <select name="state" id="state" class="block w-full border rounded p-2">
+            <flux:select label="Estado del equipo" name="state">
                 @foreach(\App\ItemState::cases() as $state)
                     <option value="{{ $state->value }}" {{ old('state', $item->state?->value) === $state->value ? 'selected' : '' }}>
                         {{ ucfirst($state->value) }}
                     </option>
                 @endforeach
-            </select>
+            </flux:select>
             <flux:input label="Cantidad del equipo" type="number" min="0" name="quantity"
                 value="{{ old('quantity', $item->quantity) }}"></flux:input>
 
@@ -56,18 +54,20 @@
             </label>
 
             <div class="mb-4">
-                <label>
+                <label class="block text-sm font-medium text-zinc-600 dark:text-zinc-300">
                     Comentario de la edición del recurso:
-                    <flux:textarea rows="auto" name="comment" class="block w-full border rounded p-2">
+                    <flux:textarea rows="auto" name="comment"
+                        class="mt-2 block w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm transition focus:border-indigo-500 focus:outline-none focus:ring-2 focus:ring-indigo-500/20 dark:border-white/10 dark:bg-white/5 dark:text-zinc-50 dark:placeholder:text-zinc-400">
                         {{ old('comment') }}
                     </flux:textarea>
                 </label>
             </div>
 
             <div class="mb-4">
-                <label>Adjuntar archivos</label>
+                <label class="block text-sm font-medium text-zinc-600 dark:text-zinc-300">Adjuntar archivos</label>
 
-                <input type="file" name="attachment[]" multiple>
+                <input type="file" name="attachment[]" multiple
+                    class="mt-2 block w-full rounded-lg border border-zinc-200 bg-white px-3 py-2 text-sm text-zinc-900 shadow-sm file:mr-4 file:rounded file:border-0 file:bg-indigo-600 file:px-3 file:py-2 file:text-sm file:font-medium file:text-white hover:file:bg-indigo-500 dark:border-white/10 dark:bg-white/5 dark:text-zinc-50">
             </div>
 
 
