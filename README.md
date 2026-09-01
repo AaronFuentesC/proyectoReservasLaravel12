@@ -2,6 +2,8 @@
 
 Sistema de gestión de reservas desarrollado con Laravel 12, diseñado para administrar salas, objetos y disponibilidad de manera eficiente.
 
+En este proyecto también he experimentado con funcionalidades nuevas de Livewire 4 como por ejemplo las islas, que se pueden ver en el dashboard del administrador.
+
 ## 🚀 Características
 - Gestión de usuarios (registro y autenticación)
 - Creación y administración de reservas
